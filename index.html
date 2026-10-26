@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FZ GYM & SPA | Top Rated Fitness Center in Chapra</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts Inter & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#FF2E2E',
+                            gold: '#FFB800',
+                            dark: '#08080A',
+                            card: '#121216',
+                            border: '#23232C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-red {
+            box-shadow: 0 0 35px -5px rgba(255, 46, 46, 0.45);
+        }
+        .glow-gold {
+            box-shadow: 0 0 30px -5px rgba(255, 184, 0, 0.35);
+        }
+        .hero-mesh {
+            background-color: #08080a;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(255, 46, 46, 0.18) 0px, transparent 55%),
+                radial-gradient(at 100% 20%, rgba(255, 184, 0, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(255, 46, 46, 0.1) 0px, transparent 50%);
+        }
+        .glass-panel {
+            background: rgba(18, 18, 22, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans selection:bg-brand-red selection:text-white pb-20 md:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-red-700 via-brand-red to-orange-600 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center tracking-wide">
+        <span>🔥 LIMITED TIME DEAL: 1st Free Workout Session + Body Composition Analysis!</span>
+        <a href="#trial" class="underline ml-2 hover:text-black transition">Claim Free Pass →</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-red to-orange-600 flex items-center justify-center font-black text-2xl text-white shadow-lg shadow-brand-red/30">
+                        FZ
+                    </div>
+                    <div>
+                        <span class="font-heading font-black text-2xl tracking-tighter text-white block leading-none">
+                            FZ <span class="text-brand-red">GYM</span>
+                        </span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold">& Spa • Chapra</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#features" class="hover:text-brand-red transition">Features</a>
+                    <a href="#services" class="hover:text-brand-red transition">Facilities</a>
+                    <a href="#pricing" class="hover:text-brand-red transition">Plans</a>
+                    <a href="#bmi" class="hover:text-brand-red transition">BMI Calculator</a>
+                    <a href="#reviews" class="hover:text-brand-red transition">Reviews</a>
+                    <a href="#location" class="hover:text-brand-red transition">Find Us</a>
+                </div>
+
+                <!-- CTA Call & Book -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:09811464198" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 hover:bg-white/10 text-white text-sm font-medium border border-white/10 transition">
+                        <i class="fa-solid fa-phone text-brand-gold text-xs"></i>
+                        <span>098114 64198</span>
+                    </a>
+                    <a href="#trial" class="px-5 py-2.5 rounded-full bg-brand-red hover:bg-red-600 text-white text-sm font-bold shadow-lg shadow-brand-red/30 transition transform hover:-translate-y-0.5">
+                        Free Trial
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300 focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-6 py-6 space-y-4">
+            <a href="#features" class="mobile-nav-link block font-medium hover:text-brand-red">Why Choose FZ Gym</a>
+            <a href="#services" class="mobile-nav-link block font-medium hover:text-brand-red">Facilities & Spa</a>
+            <a href="#pricing" class="mobile-nav-link block font-medium hover:text-brand-red">Membership Plans</a>
+            <a href="#bmi" class="mobile-nav-link block font-medium hover:text-brand-red">BMI Tool</a>
+            <a href="#reviews" class="mobile-nav-link block font-medium hover:text-brand-red">Member Reviews</a>
+            <a href="#location" class="mobile-nav-link block font-medium hover:text-brand-red">Location & Timing</a>
+            <a href="tel:09811464198" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-brand-red text-white font-bold text-center">
+                <i class="fa-solid fa-phone"></i> Call 098114 64198
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-mesh relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Rating Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+                        <span class="flex text-brand-gold text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="text-xs font-bold text-white tracking-wide">4.8 / 5.0 Rating (138+ Google Reviews)</span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    </div>
+
+                    <!-- Main Catchy Title -->
+                    <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-tight">
+                        Transform Your Body at <span class="bg-gradient-to-r from-brand-red via-orange-500 to-brand-gold bg-clip-text text-transparent">Chapra's Best</span> Gym & Spa
+                    </h1>
+
+                    <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light">
+                        High-tech commercial strength equipment, certified personal coaches, cardio training, and dedicated relaxation spa services. Start your journey today in Kashi Bazar, Chapra.
+                    </p>
+
+                    <!-- Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#trial" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-red to-orange-600 text-white font-heading font-extrabold text-base tracking-wider uppercase shadow-xl glow-red hover:opacity-95 transition text-center">
+                            Book Free 1-Day Pass <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#pricing" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-card hover:bg-white/10 border border-brand-border text-white font-heading font-bold text-base tracking-wider uppercase transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-tags text-brand-gold"></i> View Plans
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="font-heading font-black text-2xl lg:text-3xl text-white">4.8★</p>
+                            <p class="text-xs text-slate-400 font-medium">Top Rated in Chapra</p>
+                        </div>
+                        <div>
+                            <p class="font-heading font-black text-2xl lg:text-3xl text-brand-gold">138+</p>
+                            <p class="text-xs text-slate-400 font-medium">Verified Reviews</p>
+                        </div>
+                        <div>
+                            <p class="font-heading font-black text-2xl lg:text-3xl text-brand-red">Open 10PM</p>
+                            <p class="text-xs text-slate-400 font-medium">Flexible Shifts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden p-2 bg-gradient-to-b from-brand-red/40 via-brand-border to-white/5 shadow-2xl">
+                        <div class="relative rounded-2xl overflow-hidden bg-brand-card">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Gym workout zone" 
+                                 class="w-full h-80 sm:h-96 object-cover brightness-90 hover:scale-105 transition duration-700">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+                            
+                            <!-- Floating Badge 1 -->
+                            <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-xl flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-red/20 text-brand-red flex items-center justify-center text-lg font-bold">
+                                        <i class="fa-solid fa-dumbbell"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-white uppercase tracking-wider">High-Tech Equipment</h4>
+                                        <p class="text-[11px] text-slate-400">Biomechanic Imported Machines</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-bold px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400">Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Highlights Strip -->
+    <section id="features" class="py-12 bg-black border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                    <i class="fa-solid fa-person-running text-3xl text-brand-red mb-3"></i>
+                    <h3 class="font-heading font-bold text-white text-base">Elite Cardio Zone</h3>
+                    <p class="text-xs text-slate-400 mt-1">Treadmills, Ellipticals & Cross-Trainers</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                    <i class="fa-solid fa-weight-hanging text-3xl text-brand-gold mb-3"></i>
+                    <h3 class="font-heading font-bold text-white text-base">Heavy Iron Section</h3>
+                    <p class="text-xs text-slate-400 mt-1">Olympic Barbells, Dumbbells up to 45kg</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                    <i class="fa-solid fa-hot-tub-person text-3xl text-brand-red mb-3"></i>
+                    <h3 class="font-heading font-bold text-white text-base">Spa & Steam Area</h3>
+                    <p class="text-xs text-slate-400 mt-1">Muscle Recovery & Post-Workout Chill</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                    <i class="fa-solid fa-user-ninja text-3xl text-brand-gold mb-3"></i>
+                    <h3 class="font-heading font-bold text-white text-base">Certified Coaches</h3>
+                    <p class="text-xs text-slate-400 mt-1">Personal guidance for real transformation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / What We Offer -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs uppercase font-extrabold tracking-widest text-brand-red bg-brand-red/10 px-3 py-1 rounded-full border border-brand-red/20">Our Training Programs</span>
+            <h2 class="font-heading font-black text-3xl sm:text-5xl text-white mt-4 uppercase">Everything You Need To Build Great Physique</h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-3">From beginners taking their first step to seasoned athletes pushing their limits.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="group relative rounded-3xl overflow-hidden bg-brand-card border border-brand-border hover:border-brand-red/50 transition duration-300">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=80" alt="Bodybuilding" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6 space-y-3">
+                    <h3 class="font-heading font-bold text-xl text-white">Strength & Hypertrophy</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Dedicated chest, back, and leg machine rows designed for biomechanically correct muscle activation and zero joint fatigue.</p>
+                    <ul class="text-xs text-slate-300 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Smith Machines & Power Racks</li>
+                        <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Multi-cable functional rigs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group relative rounded-3xl overflow-hidden bg-brand-card border border-brand-border hover:border-brand-gold/50 transition duration-300">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=700&q=80" alt="Personal Training" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6 space-y-3">
+                    <h3 class="font-heading font-bold text-xl text-white">1-on-1 Personal Training</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Dedicated workout plans and posture correction by trained fitness instructors to guarantee fat loss and muscle gain results.</p>
+                    <ul class="text-xs text-slate-300 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-gold mr-2"></i>Custom Workout Splits</li>
+                        <li><i class="fa-solid fa-check text-brand-gold mr-2"></i>Diet & Supplement Guidance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group relative rounded-3xl overflow-hidden bg-brand-card border border-brand-border hover:border-brand-red/50 transition duration-300">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80" alt="Spa and Recovery" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6 space-y-3">
+                    <h3 class="font-heading font-bold text-xl text-white">Spa & Muscle Recovery</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Relax and detoxify after intense training. Our dedicated spa setup helps flush lactic acid and accelerate recovery time.</p>
+                    <ul class="text-xs text-slate-300 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Steam and rejuvenation room</li>
+                        <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Post-workout stretching area</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive BMI Calculator Widget -->
+    <section id="bmi" class="py-20 bg-gradient-to-b from-brand-card to-brand-dark border-y border-brand-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-black/60 border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="md:col-span-6 space-y-4">
+                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Free Health Assessment</span>
+                        <h2 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase">Check Your BMI Score</h2>
+                        <p class="text-slate-400 text-sm">Calculate your Body Mass Index (BMI) right now to know your baseline fitness category before starting your workout program.</p>
+                        
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 space-y-2 text-xs">
+                            <div class="flex justify-between text-slate-300"><span>Underweight:</span> <span class="font-bold text-blue-400">&lt; 18.5</span></div>
+                            <div class="flex justify-between text-slate-300"><span>Healthy Weight:</span> <span class="font-bold text-emerald-400">18.5 - 24.9</span></div>
+                            <div class="flex justify-between text-slate-300"><span>Overweight:</span> <span class="font-bold text-amber-400">25.0 - 29.9</span></div>
+                            <div class="flex justify-between text-slate-300"><span>Obese Range:</span> <span class="font-bold text-rose-500">30.0+</span></div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-6 bg-brand-card p-6 rounded-2xl border border-brand-border space-y-5">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2 uppercase">Weight (KG)</label>
+                                <input type="number" id="bmi-weight" placeholder="e.g. 70" value="70" class="w-full bg-black/60 border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-red">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2 uppercase">Height (CM)</label>
+                                <input type="number" id="bmi-height" placeholder="e.g. 172" value="172" class="w-full bg-black/60 border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-red">
+                            </div>
+                        </div>
+
+                        <button id="calc-bmi-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-red to-orange-600 font-heading font-extrabold text-white text-sm uppercase tracking-wider shadow-lg glow-red hover:opacity-90 transition">
+                            Calculate My BMI
+                        </button>
+
+                        <div id="bmi-result-box" class="p-4 rounded-xl bg-black/40 border border-white/5 text-center">
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">Your Body Mass Index</p>
+                            <p id="bmi-score" class="font-heading font-black text-3xl text-brand-gold mt-1">23.7</p>
+                            <p id="bmi-status" class="text-sm font-semibold text-emerald-400 mt-1">Normal & Healthy Weight</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs uppercase font-extrabold tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">Transparent Pricing</span>
+            <h2 class="font-heading font-black text-3xl sm:text-5xl text-white mt-4 uppercase">Pick The Membership That Fits You</h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-3">Affordable gym packages with full access to machines, cardio zone, and locker facilities.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- Plan 1 -->
+            <div class="rounded-3xl p-8 bg-brand-card border border-brand-border flex flex-col justify-between hover:border-white/20 transition">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Standard Starter</span>
+                    <h3 class="font-heading font-black text-2xl text-white mt-1">1 Month Plan</h3>
+                    <div class="mt-4 flex items-baseline gap-1">
+                        <span class="text-3xl font-heading font-black text-white">₹1,200</span>
+                        <span class="text-xs text-slate-400">/ month</span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-2">Ideal for trying out the gym facilities and testing your schedule.</p>
+                    
+                    <hr class="border-white/10 my-6">
+
+                    <ul class="text-xs text-slate-300 space-y-3">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Access to all strength equipment</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Cardio floor usage</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-red"></i> Changing rooms & lockers</li>
+                        <li class="flex items-center gap-2 text-slate-500"><i class="fa-solid fa-xmark"></i> Spa & Steam Sessions</li>
+                    </ul>
+                </div>
+                <div class="pt-8">
+                    <a href="#trial" class="block w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-heading font-bold text-xs uppercase tracking-wider text-center transition">
+                        Join 1 Month
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan 2 (Popular) -->
+            <div class="relative rounded-3xl p-8 bg-gradient-to-b from-brand-card via-black to-brand-card border-2 border-brand-red glow-red flex flex-col justify-between transform md:-translate-y-4">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-red text-white text-[10px] font-extrabold uppercase tracking-widest">
+                    Most Popular Choice
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Transformation Goal</span>
+                    <h3 class="font-heading font-black text-3xl text-white mt-1">3 Months Pro</h3>
+                    <div class="mt-4 flex items-baseline gap-1">
+                        <span class="text-4xl font-heading font-black text-white">₹3,000</span>
+                        <span class="text-xs text-slate-400">/ 3 months</span>
+                    </div>
+                    <p class="text-xs text-brand-gold mt-2 font-medium">Save ₹600 + Free Diet Chart</p>
+                    
+                    <hr class="border-white/10 my-6">
+
+                    <ul class="text-xs text-slate-200 space-y-3">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Full Gym Floor & Cardio Access</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Free Body Fat & BMI Tracking</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Custom Nutrition & Diet Guidance</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 2 Complimentary Spa Sessions</li>
+                    </ul>
+                </div>
+                <div class="pt-8">
+                    <a href="#trial" class="block w-full py-3.5 rounded-xl bg-brand-red hover:bg-red-600 text-white font-heading font-bold text-xs uppercase tracking-wider text-center transition shadow-lg">
+                        Claim 3 Months Pass
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="rounded-3xl p-8 bg-brand-card border border-brand-border flex flex-col justify-between hover:border-white/20 transition">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Long-term Athlete</span>
+                    <h3 class="font-heading font-black text-2xl text-white mt-1">1 Year VIP Gold</h3>
+                    <div class="mt-4 flex items-baseline gap-1">
+                        <span class="text-3xl font-heading font-black text-white">₹9,999</span>
+                        <span class="text-xs text-slate-400">/ full year</span>
+                    </div>
+                    <p class="text-xs text-emerald-400 mt-2 font-medium">Maximum savings + Complete VIP privilege</p>
+                    
+                    <hr class="border-white/10 my-6">
+
+                    <ul class="text-xs text-slate-300 space-y-3">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Unlimited 365 Days Access</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Personal Locker & Towel Service</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Full Spa Access (Weekly)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> 1-Month Freeze Option if Traveling</li>
+                    </ul>
+                </div>
+                <div class="pt-8">
+                    <a href="#trial" class="block w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-heading font-bold text-xs uppercase tracking-wider text-center transition">
+                        Get Annual Pass
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Real Google Reviews Section -->
+    <section id="reviews" class="py-20 bg-black/40 border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-xs uppercase font-extrabold tracking-widest text-brand-gold">Real Experiences</span>
+                    <h2 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase mt-1">What Chapra Says About FZ Gym</h2>
+                </div>
+                <div class="flex items-center gap-3 bg-brand-card px-5 py-3 rounded-2xl border border-brand-border">
+                    <i class="fa-brands fa-google text-2xl text-white"></i>
+                    <div>
+                        <div class="flex text-brand-gold text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white">4.8 Rating from 138+ Members</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Review 1 (From Maps Screenshot) -->
+                <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center font-bold text-white text-sm">
+                                PC
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Priyanshu Choubey</h4>
+                                <span class="text-[11px] text-slate-400">Verified Member</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-brand-gold"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="text-xs text-slate-300 italic">
+                        "Good service and excellent customer support. Best gym atmosphere in Chapra with all new equipment!"
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center font-bold text-white text-sm">
+                                AS
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Ayush Sharma</h4>
+                                <span class="text-[11px] text-slate-400">Regular Member</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-brand-gold"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="text-xs text-slate-300 italic">
+                        "Good environment, clean space and friendly staff. Trainers guide you properly on every rep and posture."
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-sm">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Rahul Kumar</h4>
+                                <span class="text-[11px] text-slate-400">Fitness Enthusiast</span>
+                            </div>
+                        </div>
+                        <span class="text-xs text-brand-gold"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="text-xs text-slate-300 italic">
+                        "Location is very convenient in Kashi Bazar. Machines are smooth and well-maintained. 100% recommended for fitness lovers in Chapra."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Trial Booking Section (Direct to WhatsApp) -->
+    <section id="trial" class="py-20 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-card via-black to-brand-card border border-brand-red/40 rounded-3xl p-8 sm:p-12 shadow-2xl relative">
+                
+                <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Zero Commitment</span>
+                    <h2 class="font-heading font-black text-3xl sm:text-4xl text-white uppercase">Claim Your Free Workout Day</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Fill your details below to instantly confirm your free trial pass via WhatsApp directly with the owner.</p>
+                </div>
+
+                <form id="trial-form" class="space-y-4 max-w-lg mx-auto">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Your Full Name</label>
+                        <input type="text" id="user-name" required placeholder="e.g. Aman Verma" class="w-full bg-white/5 border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-red">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Phone Number</label>
+                            <input type="tel" id="user-phone" required placeholder="e.g. 9876543210" class="w-full bg-white/5 border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-red">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Preferred Time Slot</label>
+                            <select id="user-slot" class="w-full bg-brand-card border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-red">
+                                <option value="Morning (6:00 AM - 9:00 AM)">Morning (6:00 AM - 9:00 AM)</option>
+                                <option value="Mid-Day (10:00 AM - 1:00 PM)">Mid-Day (10:00 AM - 1:00 PM)</option>
+                                <option value="Evening (5:00 PM - 8:00 PM)">Evening (5:00 PM - 8:00 PM)</option>
+                                <option value="Night (8:00 PM - 10:00 PM)">Night (8:00 PM - 10:00 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Fitness Goal</label>
+                        <select id="user-goal" class="w-full bg-brand-card border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-red">
+                            <option value="Fat Loss & Toning">Fat Loss & Toning</option>
+                            <option value="Muscle Building & Bulk">Muscle Building & Bulk</option>
+                            <option value="General Health & Spa">General Health & Spa</option>
+                            <option value="Strength Training">Strength Training</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-500 hover:to-green-400 font-heading font-extrabold text-white text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Book Instantly via WhatsApp
+                    </button>
+                    
+                    <p class="text-[11px] text-center text-slate-400">
+                        🔒 No spam. Instant direct booking with FZ GYM management.
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location, Timing & Contact Section -->
+    <section id="location" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Address and Details -->
+            <div class="lg:col-span-6 bg-brand-card border border-brand-border rounded-3xl p-8 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-red">Visit Us in Person</span>
+                        <h2 class="font-heading font-black text-3xl text-white uppercase mt-1">Gym Location & Hours</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">FZ GYM & SPA</h4>
+                                <p class="text-xs text-slate-300 mt-0.5">Kashi Bazar, Takkad Morde, Chapra, Bihar - 841301</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Operating Timings</h4>
+                                <p class="text-xs text-slate-300 mt-0.5">Monday to Saturday: <strong>05:30 AM – 10:00 PM</strong></p>
+                                <p class="text-xs text-emerald-400 mt-0.5">Open Now • Closes 10:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Helpline & Enquiries</h4>
+                                <a href="tel:09811464198" class="text-xs text-blue-400 hover:underline">098114 64198</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-8 flex flex-wrap gap-3">
+                    <a href="https://maps.app.goo.gl/Dt5fJMG9je6Rihnz7" target="_blank" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase flex items-center gap-2 transition">
+                        <i class="fa-solid fa-diamond-turn-right text-brand-gold"></i> Open in Google Maps
+                    </a>
+                    <a href="tel:09811464198" class="px-5 py-3 rounded-xl bg-brand-red hover:bg-red-600 text-white font-bold text-xs uppercase flex items-center gap-2 transition">
+                        <i class="fa-solid fa-phone"></i> Direct Call
+                    </a>
+                </div>
+            </div>
+
+            <!-- Map View Placeholder / Interactive Map Embed -->
+            <div class="lg:col-span-6 bg-brand-card border border-brand-border rounded-3xl overflow-hidden min-h-[350px] relative">
+                <iframe 
+                    title="FZ Gym Location"
+                    class="w-full h-full min-h-[350px] border-0 filter grayscale contrast-125 opacity-80 hover:opacity-100 transition duration-500"
+                    src="https://maps.google.com/maps?q=Kashi%20Bazar%20Takkad%20morde%20Chapra%20Bihar%20841301&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-brand-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-red flex items-center justify-center font-bold text-white text-sm">FZ</div>
+                <span class="font-heading font-black text-lg text-white">FZ GYM & SPA</span>
+                <span class="text-xs text-slate-500">| Kashi Bazar, Chapra</span>
+            </div>
+            <p class="text-xs text-slate-500">
+                © <span id="current-year"></span> FZ Gym & Spa. High-Tech Exercise & Recovery Center.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Quick-Action Bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-brand-card/95 backdrop-blur-lg border-t border-brand-border p-3 flex items-center gap-2">
+        <a href="tel:09811464198" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 text-white font-bold text-xs">
+            <i class="fa-solid fa-phone text-brand-gold"></i> Call Now
+        </a>
+        <a href="https://wa.me/919811464198?text=Hello%20FZ%20Gym,%20I%20want%20to%20enquire%20about%20gym%20membership." target="_blank" class="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-lg">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#trial" class="flex-1 flex items-center justify-center py-3 rounded-xl bg-brand-red text-white font-bold text-xs">
+            Free Pass
+        </a>
+    </div>
+
+    <!-- JavaScript Interactive Logic -->
+    <script>
+        // Set dynamic year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Nav Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // BMI Calculator Logic
+        const calcBtn = document.getElementById('calc-bmi-btn');
+        const weightInput = document.getElementById('bmi-weight');
+        const heightInput = document.getElementById('bmi-height');
+        const scoreDisplay = document.getElementById('bmi-score');
+        const statusDisplay = document.getElementById('bmi-status');
+
+        function calculateBMI() {
+            const weight = parseFloat(weightInput.value);
+            const heightCm = parseFloat(heightInput.value);
+
+            if (!weight || !heightCm || weight <= 0 || heightCm <= 0) {
+                statusDisplay.textContent = 'Please enter valid height & weight!';
+                statusDisplay.className = 'text-sm font-semibold text-rose-500 mt-1';
+                return;
+            }
+
+            const heightM = heightCm / 100;
+            const bmi = (weight / (heightM * heightM)).toFixed(1);
+            scoreDisplay.textContent = bmi;
+
+            if (bmi < 18.5) {
+                statusDisplay.textContent = 'Underweight (Bulking & Nutrition Recommended)';
+                statusDisplay.className = 'text-sm font-semibold text-blue-400 mt-1';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                statusDisplay.textContent = 'Normal & Healthy Weight (Ideal Baseline)';
+                statusDisplay.className = 'text-sm font-semibold text-emerald-400 mt-1';
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                statusDisplay.textContent = 'Overweight (Cardio & Fat Loss Recommended)';
+                statusDisplay.className = 'text-sm font-semibold text-amber-400 mt-1';
+            } else {
+                statusDisplay.textContent = 'Obese (Transformation Program Needed)';
+                statusDisplay.className = 'text-sm font-semibold text-rose-500 mt-1';
+            }
+        }
+
+        calcBtn.addEventListener('click', calculateBMI);
+
+        // Trial Form WhatsApp Redirection
+        const trialForm = document.getElementById('trial-form');
+        trialForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('user-name').value.trim();
+            const phone = document.getElementById('user-phone').value.trim();
+            const slot = document.getElementById('user-slot').value;
+            const goal = document.getElementById('user-goal').value;
+
+            const message = `Hello FZ GYM & SPA Team!%0A%0AI want to book a *1-Day Free Trial Pass*:%0A- *Name:* ${encodeURIComponent(name)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Preferred Slot:* ${encodeURIComponent(slot)}%0A- *Fitness Goal:* ${encodeURIComponent(goal)}%0A%0APlease confirm my slot!`;
+
+            // Open WhatsApp direct to Gym owner
+            window.open(`https://wa.me/919811464198?text=${message}`, '_blank');
+        });
+    </script>
+</body>
+</html>
